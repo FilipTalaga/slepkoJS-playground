@@ -1,4 +1,4 @@
-import app from './components/app/app';
-import { init } from '../slepkojs/index';
+import { app } from './components/app';
+import { init } from 'slepkojs';
 
 init(app);
