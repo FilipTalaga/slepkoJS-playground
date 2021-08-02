@@ -1,5 +1,5 @@
 import { createComponent } from 'slepkojs';
-import { button } from './button';
+import './button';
 
 const css = `
     .container {
@@ -17,7 +17,7 @@ const css = `
 const html = `
     <div class="container">
         <h2 class="title">Hello from SlepkoJS!</h2>
-        ${button}
+        <app-button click="console.log('wywoła się?')"></app-button>
     </div>
 `;
 

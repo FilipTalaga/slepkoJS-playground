@@ -17,4 +17,17 @@ const html = `
     <button class="root">Click</button>
 `;
 
-export const button = createComponent('app-button', html, css);
+const connectedCallback = (ref: any) => {
+    const attr = ref.getAttribute('click');
+    ref.addEventListener('click', () => {
+        eval(attr)
+        console.log('click click ;)');
+    });
+};
+
+export const button = createComponent(
+    'app-button',
+    html,
+    css,
+    connectedCallback,
+);
